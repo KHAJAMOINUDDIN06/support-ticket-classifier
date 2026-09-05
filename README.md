@@ -44,6 +44,8 @@ The primary text fields investigated were:
 - Ticket Subject
 - Ticket Description
 
+> Note: The dataset is intentionally not included in this GitHub repository because it is excluded through `.gitignore`.
+
 ## 🔎 Data Exploration
 
 During exploratory analysis, the dataset contained five `Ticket Type` categories:
@@ -60,7 +62,7 @@ The same ticket subjects appeared across multiple different ticket types, making
 
 A five-class random baseline is approximately 20%.
 
-The conventional text-classification experiments achieved approximately 21% accuracy, indicating that the original `Ticket Type` target was not sufficiently predictable from the available text.
+Conventional text-classification experiments achieved approximately 21% accuracy, indicating that the original `Ticket Type` target was not sufficiently predictable from the available text.
 
 ## ⚠️ Data Quality and Label Leakage
 
@@ -90,6 +92,22 @@ This approach has several advantages:
 - Suitable for a prototype
 - Does not depend on unreliable dataset labels
 
+The project also includes earlier machine-learning experiments using text features to investigate whether the original dataset labels were predictable.
+
+## 📸 Application Screenshots
+
+### Account Access Classification
+
+![Account Access Classification](images/screenshot-account.png)
+
+### Network / Connectivity Classification
+
+![Network Classification](images/screenshot-network.png)
+
+### Supported Categories
+
+![Supported Categories](images/screenshot-categories.png)
+
 ## 🏷️ Supported Categories
 
 The application supports eight categories:
@@ -112,6 +130,11 @@ support-ticket-classifier/
 │
 ├── src/
 │   └── intent_classifier.py
+│
+├── images/
+│   ├── screenshot-account.png
+│   ├── screenshot-categories.png
+│   └── screenshot-network.png
 │
 ├── data/
 │   └── customer_support_tickets.csv
